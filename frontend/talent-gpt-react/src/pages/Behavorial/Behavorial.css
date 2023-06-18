@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background: #e0e0e1;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+}
+
+#title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  /* background: linear-gradient(#10a37f, #e0e0e1); */
+  background-color: #10a37f;
+  padding: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  #title {
+    padding: 10%;
+  }
+}
+
+#app {
+  width: 100vw;
+  display: grid;
+  padding: 30px;
+}
+
+#chat_container {
+  grid-row: 1;
+  flex: 1;
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  background: #5436da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: #10a37f;
+}
+
+.profile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+  color: #000000;
+  font-size: 15px;
+  max-width: 100%;
+  overflow-x: scroll;
+  /* white-space: pre-wrap; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  grid-row: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #c5c5c6;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+  color: #000000;
+  font-size: 18px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: #e0e0e1;
+  padding: 2px;
+  width: 120px;
+  border-radius: 5px;
+  border-width: 2px;
+}
