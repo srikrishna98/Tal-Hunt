@@ -10,7 +10,7 @@ from langchain.chains.conversation.memory import ConversationBufferMemory
 
 api = Namespace("generate", description="Test Endpoint")
 
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = "#OPEN_API_KEY"
 llm = OpenAI(openai_api_key=OPENAI_API_KEY, model_name='gpt-4')
 conversation_buf = ConversationChain(
     llm=llm,

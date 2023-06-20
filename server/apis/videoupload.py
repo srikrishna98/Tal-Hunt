@@ -11,10 +11,10 @@ api = Namespace("upload", description="Test Endpoint")
 
 # UPLOAD_FOLDER = './'
 ALLOWED_EXTENSIONS = set(['mp4', 'mp3'])
-storageAccountKey = "q5lJY+6eUDWYub+q/7dP6SQCP7Vawhfj1SPcLRA1DO2a4A7hdVa4IBlT0Mwxbn2C1dXVUs7efxxa+ASti0nGSw=="
-storageAccountName = "talentgpt"
-connection_string = "DefaultEndpointsProtocol=https;AccountName=talentgpt;AccountKey=q5lJY+6eUDWYub+q/7dP6SQCP7Vawhfj1SPcLRA1DO2a4A7hdVa4IBlT0Mwxbn2C1dXVUs7efxxa+ASti0nGSw==;EndpointSuffix=core.windows.net"
-container_name = "video-recording"
+storageAccountKey = "#StorageAccountKey"
+storageAccountName = "#StorageAccountName"
+connection_string = "#ConnectionString"
+container_name = "#Container_name"
 
 
 def uploadToBlobStorage(filePath, filename):
@@ -40,7 +40,7 @@ class VideoUpload(Resource):
         uploadToBlobStorage(os.path.join(target, filename), filename)
         # shutil.rmtree(target)
         client = HumeBatchClient(
-            "OfVIJA7wPGBLoI7YRGELY4rPhMs1I56Z2F8kKfRTgRY0BIDE")
+            "#HUME_API_KEY")
         # urls = ["https://talentgpt.blob.core.windows.net/video-recording/Srini1.mp4"]
         fileURL = [
             f"https://talentgpt.blob.core.windows.net/video-recording/{filename}"]
